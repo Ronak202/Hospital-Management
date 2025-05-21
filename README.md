@@ -132,11 +132,17 @@ Additionally, the portal features a professional homepage with sections such as 
   ![image](https://github.com/user-attachments/assets/d7ecb6b0-8dc8-438d-805d-cae4766cecab)
   ![image](https://github.com/user-attachments/assets/826e821b-89cc-4224-a08f-e98fef866257)
 - Login Page
+  ![image](https://github.com/user-attachments/assets/4fe79cca-9190-4bb8-8a55-77349ea09b0b)
 - Admin Dashboard
+   ![image](https://github.com/user-attachments/assets/280529ac-b62b-4a9d-a894-13b3be418ee1)
 - Doctor Dashboard
+  ![image](https://github.com/user-attachments/assets/09584ad5-8fdb-4105-8f34-4dae0e7f8050)
 - Patient Dashboard
+   ![image](https://github.com/user-attachments/assets/c30d7a88-cf6a-4112-950c-5af6698ba1b7)
 - Invoice Generation
+   - ![image](https://github.com/user-attachments/assets/7035552d-625b-481d-85ca-1b31831d5a7b)
 - Emergency Popup
+ ![image](https://github.com/user-attachments/assets/8565cb11-d1fd-4d08-aaaf-751112046e58)
 
 ---
 
