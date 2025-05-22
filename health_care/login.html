@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <link rel="stylesheet" href="css/auth.css">
+
+</head>
+<body>
+   <a href="../index.html" class="logout-btn">Back</a>
+  <h2>Login</h2>
+  <form id="loginForm"> <!-- add id and remove action/method -->
+    <label>Email:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label>Password:</label><br>
+    <input type="password" id="password" name="password" required><br><br>
+
+    <label>Role:</label><br>
+    <select id="role" name="role"> <!-- optional if you want to send role -->
+      <option value="patient">Patient</option>
+      <option value="doctor">Doctor</option>
+      <option value="admin">Admin</option>
+    </select><br><br>
+
+    <button type="submit">Login</button>
+  </form>
+  <p class="bottom-text">Don't have an account? <a href="register.html">Register here</a></p>
+
+  <script src="script/login.js"></script>
+</body>
+</html>
