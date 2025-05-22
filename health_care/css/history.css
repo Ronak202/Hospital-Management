@@ -1,0 +1,93 @@
+/* Background and font */
+body {
+  margin: 0;
+  font-family: 'Georgia', cursive;
+  font-weight: bold;
+  background: url('../images/patientbg.webp') no-repeat center center fixed;
+  background-size: cover;
+  color: #222;
+}
+.logout-btn {
+  position:absolute;
+  top: 20px;
+  right: 20px;
+  display:inline-flex;
+  margin-bottom: 20px;
+  padding: 10px 16px;
+  background-color: #e2210cc7;
+  color: rgb(46, 23, 219);
+  text-decoration: none;
+  border-radius: 6px;
+  margin-right: 20px;
+  transition: background-color 0.3s;
+}
+a.logout-btn:hover {
+  background-color: #c0392b;
+}
+
+/* Container styling */
+.container {
+  max-width: 700px;
+  margin: 5rem auto;
+  background: rgba(169, 226, 153, 0.95);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-family: cursive;
+}
+
+/* Header */
+h2 {
+  font-size: 2rem;
+  color: #1508cd;
+  margin-bottom: 1.5rem;
+  font-family: cursive;
+  font-weight: bold;
+}
+
+/* Error message */
+#error {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+/* History container */
+#history-container {
+  padding: 1rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  background-color: #fce4ec;
+  border-radius: 12px;
+  box-shadow: inset 0 0 5px rgba(241, 10, 10, 0.1);
+  white-space: pre-wrap;
+}
+
+/* Footer */
+footer {
+  margin-top: 4rem;
+  text-align: center;
+  font-family: cursive;
+  font-weight: bold;
+  color: #0b0b0b;
+  font-size: 1.2rem;
+  background-color: rgba(248, 239, 239, 0.6);
+  padding: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .container {
+    margin: 2rem 1rem;
+    padding: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  #history-container {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,127 @@
+/* Global Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body Styling */
+body {
+  font-family: 'Cursive', sans-serif;
+  font-weight: bold;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  background: url('../images/bg7.webp') no-repeat center center fixed;
+  background-size: cover;
+}
+/* Heading */
+h1 {
+  text-align: center;
+  color: #6307ec;
+  margin-bottom: 1.5rem;
+}
+/* Logout Button */
+.logout-btn {
+  position:absolute;
+  top: 20px;
+  right: 20px;
+  display:inline-flex;
+  margin-bottom: 20px;
+  padding: 10px 16px;
+  background-color: #e74c3c;
+  color: rgb(46, 23, 219);
+  text-decoration: none;
+  border-radius: 6px;
+  margin-right: 20px;
+  transition: background-color 0.3s;
+}
+
+.logout-btn:hover {
+  background-color: #c0392b;
+}
+/* Form Section */
+label {
+  font-weight: bold;
+  margin-right: 0.5rem;
+  font-size: 1rem;
+  color: #ec2f0e;
+}
+
+input[type="number"] {
+  padding: 8px 12px;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: 1px solid #121212;
+  margin-right: 0.5rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+input[type="number"]:focus {
+  border-color: #111111;
+}
+
+button#fetchBtn {
+  padding: 8px 14px;
+  font-size: 1rem;
+  background-color: #2563eb;
+  color: rgb(227, 10, 10);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button#fetchBtn:hover {
+  background-color: #e3e4e8;
+}
+
+/* History Display Container */
+#history-container {
+  margin-top: 1.5rem;
+  background-color: rgb(170, 239, 170);
+  padding: 1.2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(12, 173, 133, 0.08);
+  white-space: pre-wrap;
+  min-height: 150px;
+  font-size: 1rem;
+  color: #1e293b;
+  line-height: 1.5;
+  font-family: cursive;
+}
+
+/* Error Message */
+#error {
+  margin-top: 1rem;
+  color: #dc2626;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  input[type="number"],
+  button#fetchBtn {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+}
+
+footer {
+  width: 100%;
+  font-family: cursive;
+  background-color: rgba(242, 233, 233, 0.8);
+  color: rgb(18, 2, 2);
+  text-align: center;
+  padding: 1.5rem 0;
+  font-size: 16px;
+  user-select: none;
+  z-index: 999;
+}

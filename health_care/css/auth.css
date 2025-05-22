@@ -1,0 +1,107 @@
+/* General Body Styling */
+body {
+  font-family:cursive;
+  background: url('../images/login_br.jpg') no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.logout-btn {
+  position:absolute;
+  top: 20px;
+  right: 20px;
+  display:inline-flex;
+  margin-bottom: 20px;
+  padding: 10px 16px;
+  background-color: #e2210cc7;
+  color: rgb(46, 23, 219);
+  text-decoration: none;
+  border-radius: 6px;
+  margin-right: 20px;
+  transition: background-color 0.3s;
+}
+a.logout-btn:hover {
+  background-color: #c0392b;
+}
+/* Heading on top */
+h2 {
+  color: #222;
+  font-weight: bold;
+  font-size: 28px;
+  margin: 0;
+}
+
+/* Form Container */
+form {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 25px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 300px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Labels */
+label {
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 5px;
+  margin-top: 10px;
+  display: block;
+}
+
+/* Inputs & Select */
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+/* Button */
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #005fa3;
+}
+
+/* Bottom text */
+.bottom-text {
+  color: #333;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.bottom-text a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+.bottom-text a:hover {
+  text-decoration: underline;
+}

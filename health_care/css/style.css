@@ -1,0 +1,664 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+    --maincolor: #2ec8a6;
+    --secondcolor: #f8a803;
+    --thirdcolor: #f4ab01;
+    --textcolor: #4A5764;
+    --light-bg: #f9f9f9;
+    --card-bg: #ffffff;
+    --border-color: #ddd;
+    --shadow-color: rgba(0,0,0,0.05);
+    --shadow-stronger: rgba(0,0,0,0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family:"cursive";
+    transition: all 0.3s ease;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 1.6rem;
+    background-color: var(--light-bg);
+    color: var(--textcolor);
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--card-bg);
+    padding: 1.5rem 5%;
+    box-shadow: 0 2px 5px var(--shadow-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 3.2rem; /* Increased from 2.4rem */
+    font-weight: 900; /* Bolder */
+    color: rgb(42, 11, 218); 
+}
+
+.logo-icon {
+    height: 75px; 
+    width: auto;  
+    margin-right: 15px;
+}
+
+.navbar a {
+    margin-left: 2.5rem; /* Increased spacing */
+    color: var(--textcolor);
+    font-size: 1.6rem;
+    font-weight: 500; /* Slightly bolder */
+    position: relative;
+}
+
+.navbar a:hover {
+    color: var(--maincolor);
+}
+
+.navbar a::after { /* Underline effect for hover */
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--maincolor);
+    transition: width 0.3s ease;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+/* Hero Section */
+.hero {
+    margin-top: 7rem; 
+    padding: 8rem 5%; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: url('images/blurbg1.jpg') no-repeat center center/cover;
+    color: white;
+    position: relative;
+}
+
+.hero::before { /* Dark overlay for better text readability */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+    z-index: 1;
+}
+
+.hero h1, .hero p, .hero div { /* Ensure content is above overlay */
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+     font-size: 5rem; 
+    font-weight: 900; 
+    color: rgb(186, 10, 10); 
+    font-family:"cursive"; 
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.4);
+}
+
+.hero p {
+    font-size: 2rem; /* Slightly larger */
+    max-width: 650px; /* Slightly wider */
+    color: rgba(12, 21, 57, 0.953); 
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-bottom: 3.5rem;
+}
+
+/* Buttons */
+.btn {
+    padding: 1.2rem 2.8rem; /* Adjusted padding */
+    background: var(--maincolor);
+    color: white;
+    border: 2px solid var(--maincolor); /* Added border for consistency */
+    border-radius: 5px;
+    margin: 0.5rem 1rem; /* Adjusted margin for better spacing */
+    cursor: pointer;
+    font-size: 1.6rem;
+    font-weight: 500;
+    display: inline-block; /* Ensure proper margin and padding */
+}
+
+.btn:hover {
+    background: var(--secondcolor);
+    border-color: var(--secondcolor);
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Card Section for Roles */
+.roles {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+    margin: 6rem auto; /* Increased margin */
+    padding: 0 5%;
+}
+
+.role-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    width: 300px; 
+    box-shadow: 0 4px 6px var(--shadow-color);
+    text-align: center;
+    overflow: hidden; /* To clip image with border-radius */
+    display: flex;
+    flex-direction: column;
+}
+
+.role-card-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.role-card-content {
+    padding: 2rem;
+    flex-grow: 1; /* Allows content to fill space if cards have different heights */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Pushes button to bottom if desired */
+}
+
+.role-card h2 {
+    font-size: 2.2rem; /* Increased size */
+    margin-bottom: 1rem;
+    color: var(--maincolor);
+}
+
+.role-card p {
+    font-size: 1.5rem; /* Increased size */
+    margin-bottom: 2rem;
+    flex-grow: 1; /* Allows paragraph to take available space */
+}
+
+.role-card .btn {
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    align-self: center; /* Center button if it's not full width */
+}
+.main-about{
+    padding: 2rem 7%;
+    width: 100%;
+    background-image: url(images/backgroung-pattern-1.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+.main-about .about-heading{
+
+    text-align: center;
+    font-size: 40px;
+    font-weight: bolder;
+    color: var(--maincolor);
+    border-bottom: 2px solid var(--secondcolor);
+    width: 200px;
+    margin: 0 auto;
+    padding: 2rem 0;
+
+}
+.inner-main-about{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    
+}
+#about {
+  scroll-margin-top: 100px; /* adjust based on your header height */
+}
+
+
+.about-inner-content-left{
+    flex: 1 1 40rem;
+}
+.about-inner-content-left img{
+    width: 90%;
+    padding: 2rem;
+}
+.about-inner-content{
+    flex: 1 1 45rem;
+}
+.about-inner-content img{
+    width: 100%;
+}
+.about-right-content h2{
+    font-size: 30px;
+    padding: 1.5rem 0;
+    color: black;
+    font-weight: bolder;
+    line-height: 4rem;
+}
+.about-right-content p{
+    font-size: 1.5rem;
+    padding: 1.5rem 0;
+    color: var(--textcolor);
+    font-family: "Inter", sans-serif;
+    text-align: left;
+    line-height: 2.5rem;
+}
+.aboutsec-content{
+    line-height: 2.5rem !important;
+}
+.aboutbtn{
+    padding: 1.5rem 3rem;
+    background-color: transparent;
+    border: 1px solid var(--maincolor);
+    margin-top: 0.5rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: 0.5s all;
+}
+.aboutbtn:hover{
+    background-color: var(--secondcolor);
+    color: white;
+    border:none;
+    padding: 1.5rem 3.5rem;
+}
+#services {
+  scroll-margin-top: 200px; /* adjust this to your header height */
+}
+
+
+/* Facilities Section */
+.facilities {
+    padding: 4rem 5%;
+    text-align: center;
+}
+
+.facilities h2 {
+    font-size: 3.2rem; /* Consistent heading size */
+    color: var(--textcolor);
+    margin-bottom: 4rem; /* Increased margin */
+}
+
+.facility-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+}
+
+.facility-card {
+    background: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px var(--shadow-stronger); /* Slightly stronger shadow */
+    overflow: hidden;
+    text-align: center;
+}
+
+.facility-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.facility-card h3 {
+    font-size: 2.2rem;
+    color: var(--maincolor);
+    margin: 2rem 1.5rem 1rem 1.5rem; /* Adjusted margin */
+}
+
+.facility-card p {
+    font-size: 1.5rem;
+    padding: 0 1.5rem 2.5rem 1.5rem; /* Adjusted padding */
+    color: var(--textcolor);
+}
+
+/* Team Section */
+.team-section {
+    padding: 4rem 5%;
+    text-align: center;
+    background-color: #f0f4f8; /* Light background for contrast */
+}
+
+.team-section h2 {
+    font-size: 3.2rem;
+    color: var(--textcolor);
+    margin-bottom: 4rem;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2.5rem; /* Adjusted gap */
+}
+
+.team-member-card {
+    background: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px var(--shadow-stronger);
+    overflow: hidden;
+    text-align: center;
+}
+
+.team-member-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.team-member-card h3 {
+    font-size: 2rem; /* Increased size */
+    color: var(--maincolor);
+    margin: 1.5rem 0 0.5rem 0;
+}
+
+.team-member-card p {
+    font-size: 1.4rem;
+    color: var(--textcolor);
+    padding: 0 1rem 2rem 1rem; /* Adjusted padding */
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 5rem 5%; /* Increased padding */
+    background-color: #eef7f5; 
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 3.2rem;
+    color: var(--textcolor);
+    margin-bottom: 4rem;
+}
+
+.testimonial-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+.testimonial-card {
+    background: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px var(--shadow-stronger);
+    width: 100%; /* Full width on small screens */
+    max-width: 450px; /* Max width for larger screens */
+    padding: 2.5rem; /* Increased padding */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.testimonial-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 2rem; /* Increased margin */
+    border: 4px solid var(--maincolor); /* Thicker border */
+}
+
+.testimonial-card p {
+    font-size: 1.6rem; /* Increased size */
+    font-style: italic;
+    color: var(--textcolor);
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+}
+
+.testimonial-card h4 {
+    font-size: 1.7rem; /* Increased size */
+    color: var(--maincolor);
+    font-weight: 600; /* Bolder */
+}
+/* blog and gallery css*/
+/* Blog page */
+.blog-page {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.blog-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.blog-card {
+  background: #fff;
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  padding: 20px;
+  text-align: left;
+}
+
+.blog-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.blog-card h2 a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+.blog-card h2 a:hover {
+  text-decoration: underline;
+}
+
+.blog-card p {
+  margin-top: 10px;
+  color: #555;
+}
+
+/* Gallery page */
+.gallery-page {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* Active link highlight in navbar */
+.navbar a.active {
+  color: #0077cc;
+  font-weight: bold;
+  border-bottom: 2px solid #0077cc;
+}
+
+
+/* Social Media Section */
+.social-media {
+  position: relative;
+  background-image: url('images/social.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 5rem 2rem;
+  color: black; /* Make all text black */
+  text-align: center;
+  font-weight: bold; /* Make all text bold */
+}
+
+.social-media .overlay {
+  background-color: rgba(255, 255, 255, 0.8); /* Light overlay for contrast */
+  padding: 3rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.social-media .promo-content h2,
+.social-media .promo-content p {
+  color: rgb(114, 16, 195);
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  font-size: large;
+}
+
+.social-media .social-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.social-media .social-icon {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  transition: background-color 0.3s ease;
+  font-size: 1rem;
+}
+
+.social-media .social-icon.linkedin{
+  background-color: #3b5998;
+}
+.social-media .social-icon.facebook:hover {
+  background-color: #2d4373;
+}
+
+.social-media .social-icon.instagram {
+  background-color: #e4405f;
+}
+.social-media .social-icon.instagram:hover {
+  background-color: #cc3360;
+}
+
+.social-media .social-icon.twitter {
+  background-color: #1da1f2;
+}
+.social-media .social-icon.twitter:hover {
+  background-color: #0d8ddb;
+}
+footer {
+    background-color: var(--textcolor);
+    color: white;
+    text-align: center;
+    padding: 2.5rem 0; /* Increased padding */
+    margin-top: 5rem;
+}
+
+/* Responsive */
+@media (max-width: 992px) { /* Tablet breakpoint */
+    .team-grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+    .facility-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+     .mobile-app-promo {
+        text-align: center;
+    }
+    .promo-content {
+        flex-basis: 100%;
+        padding-right: 0;
+        margin-bottom: 3rem;
+    }
+    .promo-image {
+        flex-basis: 100%;
+    }
+}
+
+@media (max-width: 768px) { /* Mobile breakpoint */
+    html {
+        font-size: 55%;
+    }
+
+    header {
+        padding: 1.5rem 3%;
+    }
+    .navbar {
+        position: absolute; /* Example for mobile menu, needs JS for toggle */
+        top: 100%;
+        left: -100%; /* Hidden by default */
+        width: 100%;
+        background: var(--card-bg);
+        flex-direction: column;
+        padding: 1rem 0;
+        box-shadow: 0 2px 5px var(--shadow-color);
+    }
+    .navbar.active { /* Class to show menu */
+        left: 0;
+    }
+    .navbar a {
+        margin: 1rem 0;
+        display: block;
+        text-align: center;
+    }
+
+
+    .roles {
+        flex-direction: column;
+        align-items: center;
+    }
+    .role-card {
+        width: 90%; /* Full width on mobile */
+        max-width: 350px;
+    }
+
+    .testimonial-card {
+        width: 90%;
+        max-width: 380px;
+    }
+    
+    .team-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Smaller cards on mobile */
+    }
+}

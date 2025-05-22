@@ -1,0 +1,143 @@
+/* Global Styling */
+body {
+  font-family: 'Cursive', sans-serif;
+  font-weight: bold;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  background: url('../images/bg7.webp') no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Header */
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #0f0bf2;
+  font-weight: bold;
+}
+
+/* Logout Button */
+.logout-btn {
+  position:absolute;
+  top: 20px;
+  right: 20px;
+  display:inline-flex;
+  margin-bottom: 20px;
+  padding: 10px 16px;
+  background-color: #e74c3c;
+  color: rgb(46, 23, 219);
+  text-decoration: none;
+  border-radius: 6px;
+  margin-right: 20px;
+  transition: background-color 0.3s;
+}
+
+.logout-btn:hover {
+  background-color: #c0392b;
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  background-color: rgb(10, 185, 233);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 14px 18px;
+  text-align: left;
+  border-bottom: 1px solid #040404;
+  color: #090909;
+}
+
+th {
+  background-color: #3498db;
+  color: rgb(16, 16, 16);
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Action Buttons */
+button {
+  padding: 6px 12px;
+  font-size: 14px;
+  margin: 2px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: rgb(229, 9, 9);
+}
+
+button.accept {
+  background-color: #2ecc71;
+}
+
+button.accept:hover {
+  background-color: #27ae60;
+}
+
+button.reject {
+  background-color: #e19a0bcc;
+}
+
+button.reject:hover {
+  background-color: #c0392b;
+}
+
+/* Responsive Table */
+@media (max-width: 768px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  thead tr {
+    display: none;
+  }
+
+  tr {
+    margin-bottom: 15px;
+    border: 1px solid #090909;
+    border-radius: 6px;
+    padding: 10px;
+    background-color: #fff;
+  }
+
+  td {
+    position: relative;
+    padding-left: 50%;
+    text-align: left;
+    border: none;
+    border-bottom: 1px solid #eee;
+  }
+
+  td::before {
+    position: absolute;
+    top: 14px;
+    left: 18px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    font-weight: bold;
+    content: attr(data-label);
+  }
+}
+footer {
+  position: fixed; /* Sticks to the bottom */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(242, 233, 233, 0.8);
+  color: rgb(18, 2, 2);
+  text-align: center;
+  padding: 1.5rem 0;
+  font-size: 16px;
+  user-select: none;
+  z-index: 999;
+}

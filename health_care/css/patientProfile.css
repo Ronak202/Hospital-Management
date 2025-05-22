@@ -1,0 +1,90 @@
+/* style.css */
+body {
+  font-family: 'Cursive', sans-serif;
+  font-weight: bold;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  background: url('../images/bg6.jpeg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 2rem;
+  color: #0c0cef;
+  text-shadow: 2px 2px 4px #000;
+}
+
+.profile-info {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 2rem;
+  margin: 2rem auto;
+  border-radius: 15px;
+  max-width: 500px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  font-family: 'Cursive', sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  border: 1px solid #121212;
+  border-radius: 8px;
+  margin-top: 5px;
+}
+
+button {
+  margin-top: 1.5rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #cc007a;
+  color: rgb(21, 11, 208);
+  cursor: pointer;
+  font-family: 'Cursive', sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background-color 0.5s ease;
+}
+
+button:hover {
+  background-color: #ce6210;
+}
+
+button + button {
+  margin-left: 10px;
+}
+
+.error, .success {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.error {
+  color: red;
+}
+
+.success {
+  color: green;
+}
+
+/* Footer styling */
+footer {
+  background-color: rgba(242, 233, 233, 0.8);
+  color: rgb(18, 2, 2);
+  text-align: center;
+  padding: 1.5rem 0;
+  font-size: 16px;
+  user-select: none;
+}

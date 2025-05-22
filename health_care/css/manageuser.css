@@ -1,0 +1,155 @@
+/* Global Styles */
+body {
+  font-family: 'Cursive', sans-serif;
+  font-weight: bold;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  background: url('../images/dark.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+h2, h3 {
+  text-align: center;
+  color: #1a73e8;
+  margin-bottom: 1rem;
+  font-family: cursive;
+}
+
+.logout-btn {
+  position:absolute;
+  top: 20px;
+  right: 20px;
+  display:inline-flex;
+  margin-bottom: 20px;
+  padding: 10px 16px;
+  background-color: #e74c3c;
+  color: rgb(46, 23, 219);
+  text-decoration: none;
+  border-radius: 6px;
+  margin-right: 20px;
+  transition: background-color 0.3s;
+}
+a.logout-btn:hover {
+  background-color: #c0392b;
+}
+
+/* Form Styling */
+form#addDoctorForm {
+  background-color: #09bced;
+  padding: 20px 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form#addDoctorForm input[type="text"],
+form#addDoctorForm input[type="email"],
+form#addDoctorForm input[type="password"] {
+  padding: 10px 14px;
+  border: 1.5px solid #121212;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  font-weight: bold;
+}
+
+form#addDoctorForm input[type="text"]:focus,
+form#addDoctorForm input[type="email"]:focus,
+form#addDoctorForm input[type="password"]:focus {
+  border-color: #1a73e8;
+  outline: none;
+}
+
+form#addDoctorForm button[type="submit"] {
+  padding: 12px;
+  background-color: #1a73e8;
+  color: rgb(245, 161, 45);
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: cursive;
+  transition: background-color 0.3s ease;
+}
+
+form#addDoctorForm button[type="submit"]:hover {
+  background-color: #155ab6;
+}
+
+/* Doctors List Styling */
+#doctorList {
+  list-style: none;
+  padding-left: 0;
+  font-weight: bold;
+}
+
+#doctorList li {
+  background-color: rgb(171, 237, 5);
+  padding: 15px 20px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  font-size: 1rem;
+  color: #333;
+  font-family: cursive;
+}
+
+#doctorList li strong {
+  font-size: 1.1rem;
+  color: #0b3d91;
+}
+
+#doctorList li button {
+  margin-top: 8px;
+  padding: 6px 10px;
+  background-color: #e74c3c;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#doctorList li button:hover {
+  background-color: #c0392b;
+}
+
+/* Footer Styling */
+footer {
+  width: 100%;
+  font-family: cursive;
+  background-color: rgba(242, 233, 233, 0.8);
+  color: rgb(18, 2, 2);
+  text-align: center;
+  padding: 1.5rem 0;
+  font-size: 16px;
+  user-select: none;
+  z-index: 999;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  body {
+    margin: 1rem;
+    padding: 1rem;
+  }
+
+  form#addDoctorForm {
+    padding: 15px;
+  }
+
+  #doctorList li {
+    font-size: 0.9rem;
+    padding: 12px 16px;
+  }
+
+  a.logout-btn {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+}
