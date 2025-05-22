@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Patient Dashboard</title>
+  <link rel="stylesheet" href="../css/patient.css">
+</head>
+<body>
+  <div class="wrapper">
+    <nav class="top-nav">
+      <a href="../index.html" class="logout-btn">Logout</a>
+    </nav>
+      <div class="profile" onclick="window.location.href='patientProfile.html'">
+        <img src="../images/pic3.png" alt="Profile" />
+         <h1>Profile</h1>
+    </div>
+    <section class="features-section">
+      <h3>Patient Dashboard</h3>
+      <div class="features-box">
+        <div class="feature-item bg-appointments" onclick="window.location.href='appointment.html'">
+          <div class="label">Book Appoinments</div>
+        </div>
+        <div class="feature-item bg-records"  onclick="window.location.href='history.html'">
+          <div class="label">View Medical History</div>
+        </div>
+        <div class="feature-item bg-Emergency" onclick="window.location.href='emergency.html'">
+          <div class="label">Emergency</div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    &copy; 2025 Hospital Management System. All rights reserved.
+  </footer>
+  <script src="script/appointment.js"></script>
+  <script src="../script/doctorappointment.js"></script>
+  
+  
+</body>
+</html>

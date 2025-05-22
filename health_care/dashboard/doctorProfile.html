@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Doctor Profile</title>
+ <link rel="stylesheet" href="../css/doctorprofile.css">
+</head>
+<body>
+  <h1>Doctor Profile</h1>
+  <form id="profile-form" class="profile-info">
+    <label>Doctor ID:
+      <input type="text" id="doctor-id" disabled />
+    </label>
+    <label>Name:
+      <input type="text" id="name" disabled required />
+    </label>
+    <label>Email:
+      <input type="email" id="email" disabled required />
+    </label>
+    <label>Specialization:
+      <input type="text" id="specialization" disabled />
+    </label>
+    <label>Availability:
+      <textarea id="availability" rows="3" disabled></textarea>
+    </label>
+    <button type="button" id="edit-btn">Edit Profile</button>
+    <button type="submit" id="update-btn" disabled>Update Profile</button>
+  </form>
+
+  <div id="message" class="error"></div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      const token = localStorage.getItem('token');
+      const messageDiv = document.getElementById('message');
+
+      const idInput = document.getElementById('doctor-id');
+      const nameInput = document.getElementById('name');
+      const emailInput = document.getElementById('email');
+      const specializationInput = document.getElementById('specialization');
+      const availabilityInput = document.getElementById('availability');
+      const form = document.getElementById('profile-form');
+
+      const editBtn = document.getElementById('edit-btn');
+      const updateBtn = document.getElementById('update-btn');
+
+      if (!token) {
+        messageDiv.textContent = 'You must be logged in to view this page.';
+        return;
+      }
+
+      function setFormDisabled(isDisabled) {
+        nameInput.disabled = isDisabled;
+        emailInput.disabled = isDisabled;
+        specializationInput.disabled = isDisabled;
+        availabilityInput.disabled = isDisabled;
+        updateBtn.disabled = isDisabled;
+      }
+
+      // Initially disable fields and update button
+      setFormDisabled(true);
+
+      try {
+        const response = await fetch('http://localhost:5000/api/profile/doctor/profile', {
+          headers: { 'Authorization': `Bearer ${token}` }
+        });
+
+        if (!response.ok) {
+          const errMsg = await response.json().then(data => data.message).catch(() => 'Failed to fetch profile');
+          throw new Error(errMsg);
+        }
+
+        const data = await response.json();
+
+        idInput.value = data.id;
+        nameInput.value = data.name;
+        emailInput.value = data.email;
+        specializationInput.value = data.specialization || '';
+        availabilityInput.value = data.availability || '';
+      } catch (err) {
+        messageDiv.textContent = err.message;
+        messageDiv.className = 'error';
+      }
+
+      editBtn.addEventListener('click', () => {
+        setFormDisabled(false);
+        editBtn.disabled = true; // Disable edit while editing
+        messageDiv.textContent = '';
+        messageDiv.className = '';
+      });
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        messageDiv.textContent = '';
+        messageDiv.className = '';
+        updateBtn.disabled = true;
+        updateBtn.textContent = 'Updating...';
+
+        try {
+          const res = await fetch('http://localhost:5000/api/profile/doctor/profile', {
+            method: 'PUT',
+            headers: {
+              'Content-Type': 'application/json',
+              'Authorization': `Bearer ${token}`
+            },
+            body: JSON.stringify({
+              name: nameInput.value,
+              email: emailInput.value,
+              specialization: specializationInput.value,
+              availability: availabilityInput.value
+            })
+          });
+
+          if (!res.ok) {
+            const errMsg = await res.json().then(data => data.message).catch(() => 'Update failed');
+            throw new Error(errMsg);
+          }
+
+          messageDiv.textContent = 'Profile updated successfully!';
+          messageDiv.className = 'success';
+
+          // After successful update, disable inputs again
+          setFormDisabled(true);
+          editBtn.disabled = false;
+          updateBtn.textContent = 'Update Profile';
+        } catch (err) {
+          messageDiv.textContent = err.message;
+          messageDiv.className = 'error';
+          updateBtn.disabled = false;
+          updateBtn.textContent = 'Update Profile';
+        }
+      });
+    });
+  </script>
+  <footer>
+    &copy; 2025 Hospital Management System. All rights reserved.
+  </footer>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="../css/admin.css" />
+</head>
+<body>
+  <div class="wrapper">
+    <nav class="top-nav">
+      <a href="../index.html" class="logout-btn">Logout</a>
+    </nav>
+     <div class="profile">
+        <img src="../images/admin.webp" alt="Profile" />
+    </div>
+    <section class="features-section">
+      <h3>Admin Dashboard</h3>
+      <div class="features-box">
+        <div class="feature-item bg-users" onclick="window.location.href='manageDoctors.html'">
+          <div class="label">Manage Users</div>
+        </div>
+        <div class="feature-item bg-appointments" onclick="window.location.href='adminAppointment.html'">
+          <div class="label">Manage Appointments  Generate Invoices</div>
+        </div>
+        <div class="feature-item bg-Emergency"  onclick="window.location.href='admin_emergency.html'">
+          <div class="label">Manage Emergency</div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    &copy; 2025 Hospital Management System. All rights reserved.
+  </footer>
+</body>
+</html>

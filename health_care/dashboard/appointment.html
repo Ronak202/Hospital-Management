@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Book Appointment</title>
+  <link rel="stylesheet" href="../css/appointment.css" />
+  <style>
+    /* Simple styling for table */
+    .doctors-container {
+      margin-bottom: 30px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 8px 12px;
+      text-align: left;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+   <a href="../dashboard/patient.html" class="logout-btn">Back</a>
+  <div class="container">
+    <h2>Book an Appointment</h2>
+
+    <!-- Doctors list section -->
+    <div class="doctors-container">
+      <h3>Available Doctors</h3>
+      <table id="doctorsTable">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Specialization</th>
+            <th>Availability</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Doctors data will be inserted here dynamically -->
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Appointment booking form -->
+    <form id="appointmentForm">
+      <label for="doctorId">Select Doctor:</label>
+      <select id="doctorId" name="doctorId" required>
+        <option value="" disabled selected>-- Choose a Doctor --</option>
+        <!-- Options populated dynamically by JS -->
+      </select>
+
+      <label for="appointmentTime">Appointment Date & Time:</label>
+      <input type="datetime-local" id="appointmentTime" name="appointmentTime" required />
+
+      <label for="reason">Reason:</label>
+      <textarea id="reason" name="reason" rows="4" required></textarea>
+
+      <button type="submit">Book Appointment</button>
+    </form>
+  </div>
+
+  <script src="../script/appointment.js"></script>
+  <footer>
+    &copy; 2025 Hospital Management System. All rights reserved.
+  </footer>
+</body>
+</html>
