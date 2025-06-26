@@ -15,9 +15,7 @@ A comprehensive **Hospital Management System** web application that allows **Adm
 - [Installation](#installation)  
 - [Usage](#usage)  
 - [Screenshots](#screenshots)  
-- [Contributing](#contributing)  
-- [Contact](#contact)  
-- [License](#license)  
+  
 
 ---
 
