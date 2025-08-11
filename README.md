@@ -1,6 +1,6 @@
 # HealthCare
 ###  Live Site  
-[🌐 healthcare2823ronak.netlify.app](https://healthcare2823ronak.netlify.app/)
+[🌐 healthcare2823ronak.netlify.app](healthcare2823.netlify.app)
 ###
 A comprehensive **Hospital Management System** web application that allows **Admins, Doctors, and Patients** to manage appointments, medical records, emergency requests, and communications through dedicated dashboards.
 
